@@ -1,5 +1,5 @@
-###TALLER INTRODUCCION A LA POO###
-**Integrantes:**
+##TALLER INTRODUCCION A LA POO##  
+**Integrantes:**  
 David Burneo
 William Galarza
 Vicente Jaramillo
