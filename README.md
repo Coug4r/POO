@@ -1,4 +1,4 @@
-##TALLER INTRODUCCION A LA POO
+###TALLER INTRODUCCION A LA POO###
 **Integrantes:**
 David Burneo
 William Galarza
