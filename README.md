@@ -25,7 +25,7 @@ Este repositorio contiene materiales de la materia de **Programación Orientada 
 ## 🌐 Trabajos en plataformas externas
 
 Aquí se encuentran enlaces a trabajos realizados fuera del repositorio:
-//
+
 ---
 
 ## 🛠️ Herramientas utilizadas
