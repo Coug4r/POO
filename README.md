@@ -25,9 +25,9 @@ Este repositorio contiene materiales de la materia de **Programación Orientada 
 ## 🌐 Trabajos en plataformas externas
 
 Aquí se encuentran enlaces a trabajos realizados fuera del repositorio:
--🔗 [Taller de Casos de USO(1)](https://drive.google.com/file/d/1g8MRVyZUBLXSb-Y-T_Vn5GwbWjnj3hj7/view?usp=sharing)
--🔗 [Taller de Casos de USO(2)](https://drive.google.com/drive/folders/12GOIidNvsKmhYi0a7IabuGuRnX2HKTTL?usp=drive_link)
--🔗 [Taller de Casos de USO(2)](https://drive.google.com/drive/folders/12GOIidNvsKmhYi0a7IabuGuRnX2HKTTL?usp=drive_link)
+-🔗 [Taller de Casos de USO(1)](https://drive.google.com/file/d/1g8MRVyZUBLXSb-Y-T_Vn5GwbWjnj3hj7/view?usp=sharing)  
+-🔗 [Taller de Casos de USO(2)](https://drive.google.com/drive/folders/12GOIidNvsKmhYi0a7IabuGuRnX2HKTTL?usp=drive_link)  
+-🔗 [Taller de Casos de USO(2)](https://drive.google.com/drive/folders/12GOIidNvsKmhYi0a7IabuGuRnX2HKTTL?usp=drive_link)  
 
 ---
 
