@@ -39,14 +39,8 @@ class Partido:
         self.__goles2 = goles2
 
     def mostrar_partido(self):
-<<<<<<< HEAD:src/Partido
         print("\n========== PARTIDO ==========")
         print("Fecha:", self.fecha)
         print("Estadio:", self.estadio)
         print(self.equipo1.nombre, "vs", self.equipo2.nombre)
         print("Resultado:", self.goles1, "-", self.goles2)
-=======
-        print("\nPartido")
-        print(self.__equipo1.get_nombre(), "vs", self.__equipo2.get_nombre())
-        print("Resultado:", self.__goles1, "-", self.__goles2)
->>>>>>> ab5f442b30ec4c912ca057559aefab2c3b4663c6:src/Mundial/Partido.py

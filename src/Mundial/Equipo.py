@@ -35,10 +35,5 @@ class Equipo:
         self.entrenador.mostrar_info()
 
         print("\nJugadores:")
-<<<<<<< HEAD:src/Equipo
         for jugador in self.jugadores:
             jugador.mostrar_info()
-=======
-        for jugador in self.__jugadores:
-            jugador.mostrar_info()
->>>>>>> ab5f442b30ec4c912ca057559aefab2c3b4663c6:src/Mundial/Equipo.py

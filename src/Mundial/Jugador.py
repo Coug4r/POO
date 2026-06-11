@@ -30,12 +30,6 @@ class Jugador(Persona):
     def mostrar_info(self):
         print("\n--- Jugador ---")
         super().mostrar_info()
-<<<<<<< HEAD:src/Jugador
         print("Posición:", self.posicion)
         print("Número:", self.numero)
         print("Goles:", self.goles)
-=======
-        print("Posición:", self.__posicion)
-        print("Número:", self.__numero)
-        print("Goles:", self.__goles)
->>>>>>> ab5f442b30ec4c912ca057559aefab2c3b4663c6:src/Mundial/Jugador.py
