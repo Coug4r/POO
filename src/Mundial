@@ -18,10 +18,19 @@ class Mundial:
                 return equipo
         return None
 
+    def mostrar_mundial(self):
+        print("\n========== MUNDIAL ==========")
+        print("Nombre:", self.__nombre)
+        print("Sede:", self.__sede)
+        print("Año:", self.__anio)
+
     def mostrar_equipos(self):
         for equipo in self.__equipos:
             equipo.mostrar_equipo()
 
     def mostrar_partidos(self):
-        for partido in self.__partidos:
-            partido.mostrar_partido()
+        if len(self.__partidos) == 0:
+            print("No hay partidos registrados.")
+        else:
+            for partido in self.__partidos:
+                partido.mostrar_partido()
