@@ -3,24 +3,31 @@ from Equipo import Equipo
 from Jugador import Jugador
 from Entrenador import Entrenador
 from Partido import Partido
-# Crear el Mundial
+
+# Crear el Mundial con nombre, sede y año
 mundial = Mundial("Mundial de Fútbol", "Estados Unidos, México y Canadá", 2026)
 
 
-# Función para crear equipos con jugadores
+# Función auxiliar para crear equipos con su entrenador y jugadores
 def crear_equipo(nombre_equipo, pais, entrenador_nombre, entrenador_edad, experiencia, jugadores):
+    # Se instancia el entrenador
     entrenador = Entrenador(entrenador_nombre, entrenador_edad, pais, experiencia)
+    # Se crea el equipo con el entrenador
     equipo = Equipo(nombre_equipo, pais, entrenador)
 
+    # Se agregan los jugadores al equipo
     for jugador in jugadores:
         equipo.agregar_jugador(
             Jugador(jugador[0], jugador[1], pais, jugador[2], jugador[3], jugador[4])
         )
 
+    # Finalmente se agrega el equipo al Mundial
     mundial.agregar_equipo(equipo)
 
 
-# Equipos iniciales con 3 jugadores
+# ============================
+# Creación de equipos iniciales
+# ============================
 
 crear_equipo("Ecuador", "Ecuador", "Sebastián Beccacece", 43, 15, [
     ("Moisés Caicedo", 24, "Mediocampista", 23, 2),
@@ -47,18 +54,24 @@ crear_equipo("Francia", "Francia", "Didier Deschamps", 57, 20, [
 ])
 
 
-# Partidos iniciales
+# ============================
+# Creación de partidos iniciales
+# ============================
 
+# Partido Ecuador vs Argentina
 p1 = Partido(mundial.buscar_equipo("Ecuador"), mundial.buscar_equipo("Argentina"), "15/06/2026", "Estadio Azteca")
 p1.registrar_resultado(1, 2)
 mundial.agregar_partido(p1)
 
+# Partido Brasil vs Francia
 p2 = Partido(mundial.buscar_equipo("Brasil"), mundial.buscar_equipo("Francia"), "18/06/2026", "MetLife Stadium")
 p2.registrar_resultado(2, 2)
 mundial.agregar_partido(p2)
 
 
-# Menú principal
+# ============================
+# Menú principal interactivo
+# ============================
 
 while True:
     print("\n===== SISTEMA DEL MUNDIAL DE FÚTBOL =====")
@@ -72,15 +85,19 @@ while True:
 
     opcion = input("Elige una opción: ")
 
+    # Opción 1: mostrar datos generales del Mundial
     if opcion == "1":
         mundial.mostrar_mundial()
 
+    # Opción 2: mostrar todos los equipos registrados
     elif opcion == "2":
         mundial.mostrar_equipos()
 
+    # Opción 3: mostrar todos los partidos registrados
     elif opcion == "3":
         mundial.mostrar_partidos()
 
+    # Opción 4: registrar un nuevo equipo con su entrenador
     elif opcion == "4":
         nombre_equipo = input("Nombre del equipo: ")
         pais = input("País: ")
@@ -95,6 +112,7 @@ while True:
         mundial.agregar_equipo(equipo)
         print("Equipo registrado correctamente.")
 
+    # Opción 5: registrar un jugador en un equipo existente
     elif opcion == "5":
         nombre_equipo = input("Nombre del equipo: ")
         equipo = mundial.buscar_equipo(nombre_equipo)
@@ -114,6 +132,7 @@ while True:
 
             print("Jugador agregado correctamente.")
 
+    # Opción 6: registrar un nuevo partido entre dos equipos
     elif opcion == "6":
         nombre1 = input("Nombre del primer equipo: ")
         nombre2 = input("Nombre del segundo equipo: ")
@@ -135,9 +154,11 @@ while True:
             mundial.agregar_partido(partido)
             print("Partido registrado correctamente.")
 
+    # Opción 7: salir del sistema
     elif opcion == "7":
         print("Saliendo del sistema...")
         break
 
+    # Opción inválida
     else:
         print("Opción incorrecta.")

@@ -1,3 +1,4 @@
+# Clase Mundial
 class Mundial:
 
     def __init__(self, nombre, sede, anio):
@@ -51,5 +52,13 @@ class Mundial:
             equipo.mostrar_equipo()
 
     def mostrar_partidos(self):
+<<<<<<< HEAD:src/Mundial
         for partido in self.__partidos:
             partido.mostrar_partido()
+=======
+        if len(self.__partidos) == 0:
+            print("No hay partidos registrados.")
+        else:
+            for partido in self.__partidos:
+                partido.mostrar_partido()
+>>>>>>> ab5f442b30ec4c912ca057559aefab2c3b4663c6:src/Mundial/Mundial.py

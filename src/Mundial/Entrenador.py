@@ -1,5 +1,6 @@
 from Persona import Persona
 
+# Clase Entrenador que hereda de Persona
 class Entrenador(Persona):
 
     def __init__(self, nombre, edad, pais, experiencia):
@@ -18,4 +19,8 @@ class Entrenador(Persona):
     def mostrar_info(self):
         print("\n--- Entrenador ---")
         super().mostrar_info()
+<<<<<<< HEAD:src/Entrenador
         print("Experiencia:", self.experiencia, "años")
+=======
+        print("Experiencia:", self.__experiencia)
+>>>>>>> ab5f442b30ec4c912ca057559aefab2c3b4663c6:src/Mundial/Entrenador.py
