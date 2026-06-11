@@ -1,3 +1,4 @@
+# Clase Mundial
 class Mundial:
     def __init__(self, nombre, sede, anio):
         self.__nombre = nombre

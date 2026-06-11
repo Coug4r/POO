@@ -1,3 +1,4 @@
+# Clase Partido
 class Partido:
     def __init__(self, equipo1, equipo2, fecha, estadio):
         self.__equipo1 = equipo1

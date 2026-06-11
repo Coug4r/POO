@@ -1,3 +1,4 @@
+# Clase Equipo
 class Equipo:
     def __init__(self, nombre, pais, entrenador):
         self.__nombre = nombre

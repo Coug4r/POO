@@ -1,5 +1,6 @@
 from Persona import Persona
 
+# Clase Jugador que hereda de Persona
 class Jugador(Persona):
     def __init__(self, nombre, edad, pais, posicion, numero, goles):
         super().__init__(nombre, edad, pais)
