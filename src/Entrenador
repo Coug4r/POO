@@ -1,11 +1,21 @@
 from Persona import Persona
 
 class Entrenador(Persona):
+
     def __init__(self, nombre, edad, pais, experiencia):
         super().__init__(nombre, edad, pais)
         self.__experiencia = experiencia
 
+    @property
+    def experiencia(self):
+        return self.__experiencia
+
+    @experiencia.setter
+    def experiencia(self, valor):
+        if valor >= 0:
+            self.__experiencia = valor
+
     def mostrar_info(self):
         print("\n--- Entrenador ---")
         super().mostrar_info()
-        print("Experiencia:", self.__experiencia)
+        print("Experiencia:", self.experiencia, "años")

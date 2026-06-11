@@ -1,15 +1,34 @@
 from Persona import Persona
 
 class Jugador(Persona):
+
     def __init__(self, nombre, edad, pais, posicion, numero, goles):
         super().__init__(nombre, edad, pais)
-        self.__posicion = posicion
-        self.__numero = numero
+
+        self._posicion = posicion
+        self._numero = numero
         self.__goles = goles
+
+    @property
+    def posicion(self):
+        return self._posicion
+
+    @property
+    def numero(self):
+        return self._numero
+
+    @property
+    def goles(self):
+        return self.__goles
+
+    @goles.setter
+    def goles(self, valor):
+        if valor >= 0:
+            self.__goles = valor
 
     def mostrar_info(self):
         print("\n--- Jugador ---")
         super().mostrar_info()
-        print("Posición:", self.__posicion)
-        print("Número:", self.__numero)
-        print("Goles:", self.__goles)
+        print("Posición:", self.posicion)
+        print("Número:", self.numero)
+        print("Goles:", self.goles)

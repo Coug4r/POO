@@ -1,23 +1,38 @@
 class Equipo:
+
     def __init__(self, nombre, pais, entrenador):
-        self.__nombre = nombre
-        self.__pais = pais
-        self.__entrenador = entrenador
+        self._nombre = nombre
+        self._pais = pais
+        self._entrenador = entrenador
         self.__jugadores = []
 
-    def get_nombre(self):
-        return self.__nombre
+    @property
+    def nombre(self):
+        return self._nombre
+
+    @property
+    def pais(self):
+        return self._pais
+
+    @property
+    def entrenador(self):
+        return self._entrenador
+
+    @property
+    def jugadores(self):
+        return self.__jugadores
 
     def agregar_jugador(self, jugador):
         self.__jugadores.append(jugador)
 
     def mostrar_equipo(self):
-        print("\nEquipo:", self.__nombre)
-        print("País:", self.__pais)
+        print("\n======================")
+        print("Equipo:", self.nombre)
+        print("País:", self.pais)
 
         print("\nEntrenador:")
-        self.__entrenador.mostrar_info()
+        self.entrenador.mostrar_info()
 
         print("\nJugadores:")
-        for jugador in self.__jugadores:
+        for jugador in self.jugadores:
             jugador.mostrar_info()
