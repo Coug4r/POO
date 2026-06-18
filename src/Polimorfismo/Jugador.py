@@ -1,5 +1,5 @@
-import Participante
-class jugdor(Participante):
+from Participante import Participante
+class Jugador(Participante):
     def __init__(self, nombre, nacionalidad, posicion):
         super().__init__(nombre, nacionalidad)
         self.posicion = posicion

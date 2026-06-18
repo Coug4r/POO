@@ -1,4 +1,4 @@
-import Participante
+from Participante import Participante
 class Entrenador(Participante):
     def __init__(self, nombre, nacionalidad, estrategia):
         super().__init__(nombre, nacionalidad)

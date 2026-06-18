@@ -1,17 +1,11 @@
-import Jugador
-import Entrenador
-import Arbritro
+from Jugador import Jugador
+from Entrenador import Entrenador
+from Arbritro import Arbitro
 
 def main():
-    participantes = []
-
-    jugador1 = Jugador("Lionel Messi", "Argentina", "Delantero")
-    entrenador1 = Entrenador("Diego Simeone", "Argentina", "Defensiva")
-    arbitro1 = Arbritro("Pierluigi Collina", "Italia", "Árbitro Principal")
-
-    print(jugador1.realizar_actividad())
-    print(entrenador1.realizar_actividad())
-    print(arbitro1.realizar_actividad())
+    participantes = [(Jugador("Lionel Messi", "Argentina", "Delantero")),(Entrenador("Diego Simeone", "Argentina", "Defensiva")),(Arbitro("Pierluigi Collina", "Italia", "Árbitro Principal"))]
+    for participante in participantes:
+        print(participante.realizar_actividad())
 
 if __name__ == "__main__":
     main()

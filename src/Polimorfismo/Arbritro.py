@@ -1,4 +1,4 @@
-import Participante
+from Participante import Participante
 class Arbitro(Participante):
     def __init__(self, nombre, nacionalidad, categoria):
         super().__init__(nombre, nacionalidad)
