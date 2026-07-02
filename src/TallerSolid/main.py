@@ -15,7 +15,7 @@ def main():
     while True:
         print("1. Agregar participante")
         print("2. Generar reporte")
-        print("3. Mostrar información")
+        print("3. Mostrar participantes")
         print("4. Salir")
         opcion = input("Seleccione una opción: ")
         if opcion == "1":
@@ -29,7 +29,7 @@ def main():
                     pais = input("Ingrese el país del participante: ")
                     posision = input("Ingrese la posicion en la que juega: ")
                     numero_camiseta = input("Ingrese el numero de la camiseta: ")
-                    gestor.ultimaId = gestor.ultimaId + 1
+                    gestor.ultimaId += 1
                     participante = Jugador(gestor.ultimaId, nombre, pais, posision, numero_camiseta)
                     gestor.guardar_participantes(participante)
                 case "2":   # Árbitro
@@ -37,7 +37,7 @@ def main():
                     pais = input("Ingrese el país del árbitro: ")
                     categoria = input("Ingrese la categoría del árbitro: ")
 
-                    gestor.ultimaId = gestor.ultimaId + 1
+                    gestor.ultimaId += 1
                     participante = Arbitro(gestor.ultimaId, nombre, pais, categoria)
                     gestor.guardar_participantes(participante)
 
@@ -46,7 +46,7 @@ def main():
                     pais = input("Ingrese el país del entrenador: ")
                     experiencia = input("Ingrese los años de experiencia: ")
 
-                    gestor.ultimaId = gestor.ultimaId + 1
+                    gestor.ultimaId += 1
                     participante = Entrenador(gestor.ultimaId, nombre, pais, experiencia)
                     gestor.guardar_participantes(participante)
 

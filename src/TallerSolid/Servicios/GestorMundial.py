@@ -15,6 +15,10 @@ class GestorMundial:
 
     def guardar_participantes(self, participante: Participante) -> None:
         participantes = self.repositorio.cargar()
+        if participantes:
+            ultimo_id = max(p.id_participante for p in participantes)
+        else:
+            ultimo_id = 0
         participantes.append(participante)
         self.repositorio.guardar(participantes)
         self.servicio_notificacion.enviar("Participante guardado correctamente.")

@@ -11,7 +11,12 @@ class GeneradorReporte(Reporte):
             # Si es Jugador, añadir atributos específicos
             if hasattr(p, "posicion") and hasattr(p, "numero_camiseta"):
                 reporte += f", Posición: {p.posicion}, Camiseta: {p.numero_camiseta}"
-
+            # Si es Árbitro, añadir atributos específicos
+            elif hasattr(p, "categoria"):
+                reporte += f", Categoría: {p.categoria}"    
+            # Si es Entrenador, añadir atributos específicos
+            elif hasattr(p, "experiencia"):
+                reporte += f", Experiencia: {p.experiencia} años"
             reporte += "\n"
         return reporte
 
