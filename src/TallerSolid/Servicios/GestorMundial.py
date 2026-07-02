@@ -1,15 +1,17 @@
-from Servicios.ServicioNotificacion import ServicioNotificacion
-from Servicios.GeneradorReporte import GeneradorReporte
-from Servicios.Repositorio import Repositorio
 from Entidades.Participante import Participante
+from Interfaces.Notificacion import Notificacion
+from Interfaces.Reporte import Reporte
+from Interfaces.Persistencia import Persistencia
 datos = "./datos.pkl"
 participantes = []
 class GestorMundial:
-    def __init__(self):
-        self.servicio_notificacion = ServicioNotificacion()
-        self.generador_reporte = GeneradorReporte()
-        self.repositorio = Repositorio(datos)
-        self._ultimaId = 0   # atributo privado para manejar el ID
+    def __init__(self, servicio_notificacion: Notificacion, 
+                 generador_reporte: Reporte, 
+                 repositorio: Persistencia):
+        self.servicio_notificacion = servicio_notificacion
+        self.generador_reporte = generador_reporte
+        self.repositorio = repositorio
+        self._ultimaId = 0
 
     def guardar_participantes(self, participante: Participante) -> None:
         participantes = self.repositorio.cargar()

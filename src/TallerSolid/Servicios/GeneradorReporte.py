@@ -6,7 +6,7 @@ class GeneradorReporte(Reporte):
         reporte = "=== Reporte de Participantes ===\n"
         for p in participantes:
             # Mostrar atributos comunes
-            reporte += f"ID: {p.id}, Nombre: {p.nombre}, País: {p.pais}"
+            reporte += f"ID: {p.id_participante}, Nombre: {p.nombre}, País: {p.nacionalidad}"
 
             # Si es Jugador, añadir atributos específicos
             if hasattr(p, "posicion") and hasattr(p, "numero_camiseta"):

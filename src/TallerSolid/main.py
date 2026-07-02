@@ -2,8 +2,14 @@ from Servicios.GestorMundial import GestorMundial
 from Entidades.Jugador import Jugador
 from Entidades.Arbitro import Arbitro
 from Entidades.Entrenador import Entrenador
+from Servicios.ServicioNotificacion import ServicioNotificacion
+from Servicios.GeneradorReporte import GeneradorReporte
+from Servicios.Repositorio import Repositorio
 def main():
-    gestor = GestorMundial()
+    gestor = GestorMundial(
+        ServicioNotificacion(),
+        GeneradorReporte(),
+        Repositorio("./datos.pkl"))
     participante = None
     #Menu para usuario para agregar participantes a partir de entidades y generar reporte
     while True:
@@ -26,7 +32,6 @@ def main():
                     gestor.ultimaId = gestor.ultimaId + 1
                     participante = Jugador(gestor.ultimaId, nombre, pais, posision, numero_camiseta)
                     gestor.guardar_participantes(participante)
-                    break
                 case "2":   # Árbitro
                     nombre = input("Ingrese el nombre del árbitro: ")
                     pais = input("Ingrese el país del árbitro: ")
